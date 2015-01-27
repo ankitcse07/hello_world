@@ -2,14 +2,48 @@
 # This repository is created to learn the git by following tutorial from
 # http://git-scm.com/docs/user-manual.html
 
-* git branch <new branch> :  This will create new branch 
-* git checkout -b <new branch> <existing branch name or tag name> :  This will create new branch from the existing branch or tag
-* git branch : This command will list all the existing branches and asterik
-  against the current working branch.
 
+Creating, deleting, and modifying branches
+===========================================
+
+* git branch
+  list all branches.
+* git branch <branch> 
+  create a new branch named <branch>, referencing the same point in history as 
+  the current branch.
+* git branch <branch> <start-point>
+  create a new branch named <branch>, referencing <start-point>, which may be 
+  specified any way you like, including using a branch name or a tag name.
+* git branch -d <branch>
+  delete the branch <branch>; if the branch is not fully merged in its 
+  upstream branch or contained in the current branch, this command will fail with a warning.
+* git branch -D <branch>
+  delete the branch <branch> irrespective of its merged status.
+
+* git checkout <branch> 
+  make the current branch <branch>, updating the working directory to reflect 
+  the version referenced by <branch>.
+* git checkout -b <new> <start-point>
+  create a new branch <new> referencing <start-point>, and check it out.
+
+Show command
+============
+* git show :  Shows most recent commit on the current branch
+  Every commit has a 40-hexdigit id, sometimes called the "object name" or the 
+  "SHA-1 id", shown on the first line of the git show output. You can usually 
+  refer to a commit by a shorter name, such as a tag or a branch name, but this
+  longer name can also be useful. Most importantly, it is a globally unique name
+  for this commit: so if you tell somebody else the object name (for example in email), 
+  then you are guaranteed that name will refer to the same commit in their repository 
+  that it does in yours (assuming their repository has that commit at all). Since
+  the object name is computed as a hash over the contents of the commit, you are
+  guaranteed that the commit can never change without its name also changing
+ 
+
+Commiting local changes
+=======================
 * In order to finally commit your changes in your local sandbox do the
   following:
      git add . 
      git commit
-* To push   
- 
+
