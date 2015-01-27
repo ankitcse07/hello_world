@@ -40,6 +40,12 @@ Show command
   guaranteed that the commit can never change without its name also changing
  
 
+
+Updating a repository with git fetch
+====================================
+  After you clone a repository and commit a few changes of your own, you may wish to check the original repository for updates.
+  The git-fetch command, with no arguments, will update all of the remote-tracking branches to the latest version found in the original repository. It will not touch any of your own branches—not even the "master" branch that was created for you on clone.
+
 Commiting local changes
 =======================
 * In order to finally commit your changes in your local sandbox do the
