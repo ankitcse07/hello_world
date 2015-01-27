@@ -1,1 +1,15 @@
-# hello world example
+# Author-Ankit Garg,  Date-27-01-2015
+# This repository is created to learn the git by following tutorial from
+# http://git-scm.com/docs/user-manual.html
+
+* git branch <new branch> :  This will create new branch 
+* git checkout -b <new branch> <existing branch name or tag name> :  This will create new branch from the existing branch or tag
+* git branch : This command will list all the existing branches and asterik
+  against the current working branch.
+
+* In order to finally commit your changes in your local sandbox do the
+  following:
+     git add . 
+     git commit
+* To push   
+ 
